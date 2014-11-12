@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  get 'welcome/about'
+  get 'all_about_us'=>'welcome#about'
 
-  get 'welcome/contact'
+  get 'drop_us_a_line'=>'welcome#contact'
+
+  root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
