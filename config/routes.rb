@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   resources :users
 
   # get 'welcome/index'
-  get 'index'=>'welcome#index'
+  get 'index' => 'welcome#index'
 
   # get 'all_about_us'=>'welcome#about'
-  get 'about'=>'welcome#about'
+  get 'about' => 'welcome#about'
 
-  get 'contact'=>'welcome#contact'
+  get 'contact' => 'welcome#contact'
 
   root 'welcome#index'
 
