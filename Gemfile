@@ -12,6 +12,7 @@ end
 group :production do
 	gem 'pg', '0.17.1'
 	gem 'rails_12factor', '0.0.2'
+	gem 'high_voltage', '~> 2.2.1'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
