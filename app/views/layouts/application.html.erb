@@ -4,14 +4,15 @@
   <title>Blog</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
 
 <!-- Bootstrap Core CSS -->
-    <link href="vendor/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="vendor/stylesheets/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom CSS -->
-    <link href="vendor/stylesheets/agency.css" rel="stylesheet">
+    <!-- <link href="vendor/stylesheets/agency.css" rel="stylesheet"> -->
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -24,12 +25,13 @@
 </head>
 <body>
 	<div class="container">
-  <%= link_to "About", about_path, class: "navbar-brand" %>
-	<%= link_to "Contact", contact_path, class: "navbar-brand" %>
+    <ul class="nav nav-pills" role="tablist">
+      <li><%= link_to "Blog Posts", blog_posts_path, class: "navbar-brand" %></li>
+      <li><%= link_to "About", about_path, class: "navbar-brand" %></li>
+      <li><%= link_to "Contact", contact_path, class: "navbar-brand" %></li>
+    </ul>
 		<%= yield %>
 	</div>
-
 <%#=full_title(yield(:title))%>
-
 </body>
 </html>

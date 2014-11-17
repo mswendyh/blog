@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :comments
+
+  resources :blog_posts
+
   resources :users
 
   # get 'welcome/index'

@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+  	@blog_posts = BlogPost.all
   end
 
   def home
