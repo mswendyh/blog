@@ -1,0 +1,15 @@
+<h1><%= @blog_post.title %></h1>
+
+<p> <%= @blog_post.body %></p>
+
+<%= image_tag @blog_post.avatar.url(:medium) %>
+
+<div class="btn-group">
+  <%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-default" %> 
+  <%= link_to 'Back', blog_post_path, class: "btn btn-default" %>
+</div>
+
+
+<p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+ </p

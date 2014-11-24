@@ -24,14 +24,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
+  <div class="container">
     <ul class="nav nav-pills" role="tablist">
       <li><%= link_to "Blog Posts", blog_posts_path, class: "navbar-brand" %></li>
       <li><%= link_to "About", about_path, class: "navbar-brand" %></li>
       <li><%= link_to "Contact", contact_path, class: "navbar-brand" %></li>
     </ul>
-		<%= yield %>
-	</div>
+    <%= yield %>
+  </div>
 <%#=full_title(yield(:title))%>
 </body>
 </html>
