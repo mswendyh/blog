@@ -10,17 +10,17 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    @blog_post = BlogPost.find(params[:id])
   end
 
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
-    @comment = Comment.all
   end
 
   # GET /blog_posts/1/edit
   def edit
-    @comment = Comment.all
+    @blog_post = BlogPost.find(params[:id])
   end
 
   # POST /blog_posts
@@ -42,6 +42,7 @@ class BlogPostsController < ApplicationController
   # PATCH/PUT /blog_posts/1
   # PATCH/PUT /blog_posts/1.json
   def update
+    @blog_post = BlogPost.find(params[:id])
     respond_to do |format|
       if @blog_post.update(blog_post_params)
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
@@ -56,6 +57,7 @@ class BlogPostsController < ApplicationController
   # DELETE /blog_posts/1
   # DELETE /blog_posts/1.json
   def destroy
+    @blog_post = BlogPost.find(params[:id])
     @blog_post.destroy
     respond_to do |format|
       format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }

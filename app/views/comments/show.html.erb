@@ -1,17 +1,23 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Comment Body:</strong>
-  <%= @comment.comment_body %>
+  <strong>Title:</strong>
+  <%= @blog_post.title %>
 </p>
+ 
 <p>
-  <strong>Blog Post ID:</strong>
-  <%= @comment.blog_post_id %>
+  <strong>Text:</strong>
+  <%= @blog_post.text %>
 </p>
-<p>
-  <strong>Blog Post ID:</strong>
-  <%= @comment.blog_post %>
-</p>
-
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+ 
+<h2>Add a comment:</h2>
+<%= form_for([@blog_post, @blog_post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :comment_body %><br>
+    <%= f.text_area :comment_body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', blog_posts_path %>
+| <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>

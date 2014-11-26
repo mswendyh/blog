@@ -6,10 +6,10 @@
        <div class="panel panel-default">
         <div class="panel-body">
          <h2><%= blog_post.title %></h2>
-         <h3<%= blog_post.body %></h3>
+         <p><%= blog_post.body %></p>
          <% if blog_post.avatar_file_name != nil %>
               <%= image_tag blog_post.avatar.url(:medium) %>
-            <% end %>
+          <% end %>
 
          <div class="btn-group">
           <%= link_to 'Show', blog_post, class: "btn btn-default" %>

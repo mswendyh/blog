@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-
-  resources :blog_posts
+  resources :blog_posts do
+    resources :comments
+  end
 
   resources :users
 
