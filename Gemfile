@@ -38,6 +38,9 @@ gem 'spring',        group: :development
 # paperclip gem! woohoooooooo
 gem 'paperclip'
 
+# font-awesome gem
+gem 'font-awesome-less'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

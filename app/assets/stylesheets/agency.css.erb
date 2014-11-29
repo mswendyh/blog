@@ -265,7 +265,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(<%= asset_path "header-bg.jpg" %>);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -647,13 +647,58 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
+
+
+
+#blog {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#blog img {
+    margin: 0 auto;
+    border: 7px solid #fff;
+}
+
+#blog .panel {
+    float: center;
+    text-align: center;
+
+}
+
+#blog h3 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+#blog p {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 aside.clients img {
     margin: 50px auto;
 }
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-image: url(<%= asset_path "map-image.png" %>);
     background-position: center;
     background-repeat: no-repeat;
 }
