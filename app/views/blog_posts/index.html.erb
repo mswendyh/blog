@@ -1,29 +1,158 @@
 <section id="blog">
-<h2>Blog</h2>
+<!-- <h1>Blog</h1> -->
 
-  <div class="row">
-    <% @blog_posts.sort.reverse.each do |blog_post| %>
-      <div class="col-md-6">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <h3><%= blog_post.title %></h3>
-          </div>
-            <div class="panel-body"
+  <!-- <div class="row"> -->
+    <%# @blog_posts.sort.reverse.each do |blog_post| %>
+      <!-- <div class="col-md-6"> -->
+        <!-- <div class="panel panel-primary"> -->
+          <!-- <div class="panel-heading"> -->
+            <!-- <h4><%#= blog_post.title %></h4> -->
+          <!-- </div> -->
+            <!-- <div class="panel-body" -->
+              <!-- <p><%# if blog_post.avatar_file_name != nil %> -->
+                <%#= image_tag blog_post.avatar.url(:medium) %>
+              <!-- <%# end %></p> -->
+              <!-- <p><%#= blog_post.body %></p> -->
+
+              <!-- <div class="btn-group"> -->
+                <%#= link_to 'Show', blog_post, class: "btn btn-success" %>
+                <%#= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-success" %>
+                <%#= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %>
+              <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+    <!-- </div> -->
+  <%# end %>
+<!-- </div> -->
+
+<%#= link_to 'New Blog post', new_blog_post_path, class: "btn btn-primary" %>
+<!-- </section> -->
+
+
+<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Blog</h1>
+        <p class="lead blog-description">Adventures in archiving...</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+          <% @blog_posts.sort.reverse.each do |blog_post| %>
+            <h2 class="blog-post-title"><%= blog_post.title %></h2>
+            <p class="blog-post-meta">November 27, 2014 by <a href="#">Wendy</a></p>
+
               <p><% if blog_post.avatar_file_name != nil %>
                 <%= image_tag blog_post.avatar.url(:medium) %>
               <% end %></p>
               <p><%= blog_post.body %></p>
 
               <div class="btn-group">
-                <%= link_to 'Show', blog_post, class: "btn btn-default" %>
-                <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-default" %>
-                <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+                <%= link_to 'Show', blog_post, class: "btn btn-success" %>
+                <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-success" %>
+                <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %>
+                <br>
+                <br>
               </div>
-            </div>
-          </div>
-    </div>
-  <% end %>
-</div>
+              <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+          <br>
+          <br>
+                <% end %>
 
-<%= link_to 'New Blog post', new_blog_post_path %>
+          </div><!-- /.blog-post -->
+
+          
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Welcome to my blog about digital archives...and kittehz.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">November 2014</a></li>
+              <li><a href="#">October 2014</a></li>
+              <!-- <li><a href="#">January 2014</a></li> -->
+              <!-- <li><a href="#">December 2013</a></li> -->
+              <!-- <li><a href="#">November 2013</a></li> -->
+              <!-- <li><a href="#">October 2013</a></li> -->
+              <!-- <li><a href="#">September 2013</a></li> -->
+              <!-- <li><a href="#">August 2013</a></li> -->
+              <!-- <li><a href="#">July 2013</a></li> -->
+              <!-- <li><a href="#">June 2013</a></li> -->
+              <!-- <li><a href="#">May 2013</a></li> -->
+              <!-- <li><a href="#">April 2013</a></li> -->
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://www.github.com/mswendyh">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <!-- <li><a href="#">Facebook</a></li> -->
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+<!--     <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer> -->
 </section>
+
+<footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <span class="copyright">Copyright &copy; Your Website 2014</span> -->
+                    <span class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></span>
+                </div>
+                <!-- <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div> -->
+                <!-- <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<!--   </body>
+</html> -->
