@@ -9,19 +9,18 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 
 
 
-// = require agency
-// = require jquery_ujs
-// = require classie
-// = require bootstrap
-// = require bootstrap.min
-// = require cbpAnimatedHeader
-// = require cbpAnimatedHeader.min
-// = require contact_me
-// = require jqBootstrapValidation
-// = require jquery-1.11.0
-// = require turbolinks
-// = require_self
+//= require jquery_ujs
+//= require agency
+//= require classie
+//= require bootstrap
+//= require bootstrap.min
+//= require cbpAnimatedHeader
+//= require cbpAnimatedHeader.min
+//= require contact_me
+//= require jqBootstrapValidation
+//= require jquery-1.11.0
+//= require turbolinks
+//= require_self

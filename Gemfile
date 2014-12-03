@@ -38,6 +38,11 @@ gem 'spring',        group: :development
 # paperclip gem! woohoooooooo
 gem 'paperclip'
 
+# devise gem
+gem 'devise'
+
+# cancan gem
+gem 'cancan'
 
 # font-awesome gem
 # gem 'font-awesome-less'
